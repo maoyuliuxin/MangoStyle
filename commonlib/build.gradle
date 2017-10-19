@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    //必须添加
+    api project(':widget')
+    //路由
+    api project(':uiroutelib')
+    //选择添加
+    //数据库
+    api project(':dblib')
+    //看个人爱好
+    //statusbar
+    api rootProject.ext.dependencies["statusbarlib"]
+    //adapter
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    //图片处理
+    api rootProject.ext.dependencies["matisse"]
+    //权限处理
+    api rootProject.ext.dependencies["easypermissions"]
+    //下拉刷新
+    api rootProject.ext.dependencies["SmartRefreshLayout"]
+}
