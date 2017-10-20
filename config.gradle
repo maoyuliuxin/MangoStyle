@@ -41,7 +41,8 @@ ext {
             "easypermissions"              : 'pub.devrel:easypermissions:0.4.3',
             //下拉刷新
             "SmartRefreshLayout"           : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3',
-            "anko"                         : "org.jetbrains.anko:anko:0.10.1"
+            "anko"                         : "org.jetbrains.anko:anko-sdk25-coroutines:0.10.1",
+            "anko_v7"                      : "org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.1"
     ]
 
 }
