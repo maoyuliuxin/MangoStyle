@@ -42,4 +42,6 @@ dependencies {
     api rootProject.ext.dependencies["easypermissions"]
     //下拉刷新
     api rootProject.ext.dependencies["SmartRefreshLayout"]
+    //圆形view
+    api rootProject.ext.dependencies["circleimageview"]
 }

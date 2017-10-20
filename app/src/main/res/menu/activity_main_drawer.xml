@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_picture"
+            android:title="美女大图"/>
+        <item
+            android:id="@+id/nav_express"
+            android:title="快递查询"/>
+        <item
+            android:id="@+id/nav_movie"
+            android:title="电影播放"/>
+        <item
+            android:id="@+id/nav_music"
+            android:title="音乐放松"/>
+        <item
+            android:id="@+id/nav_travel"
+            android:title="旅游动态"/>
+    </group>
+
+    <item android:title="设置">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:title="关于我们"/>
+            <item
+                android:id="@+id/nav_centre"
+                android:title="个人中心"/>
+            <!--android:icon="@drawable/ic_menu_send"-->
+            <item
+                android:id="@+id/nav_logout"
+                android:title="退出"/>
+        </menu>
+    </item>
+
+</menu>

@@ -14,4 +14,3 @@ inline fun Int.dateForma(): String {
     return format.format(this)
 }
 
-inline fun Int.toTime(): String = (this / 60 / 60).Add20() + ":" + (this / 60 % 60).Add20() + ":" + (this % 60).Add20()

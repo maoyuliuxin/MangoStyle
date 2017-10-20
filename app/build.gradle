@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -27,6 +28,15 @@ android {
 
 }
 
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+
 dependencies {
+    kapt rootProject.ext.dependencies["arouter-compiler"]
     implementation project(':commonlib')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
