@@ -38,5 +38,8 @@ kapt {
 dependencies {
     kapt rootProject.ext.dependencies["arouter-compiler"]
     implementation project(':commonlib')
+    if (!rootProject.ext.isBuildApp) {
+        implementation project(":picture")
+    }
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }

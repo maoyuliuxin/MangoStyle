@@ -1,1 +1,1 @@
-include ':baselib', ':baseres', ':uiroutelib', ':commonlib', ':dblib', ':widget', ':app'
+include ':baselib', ':baseres', ':uiroutelib', ':commonlib', ':dblib', ':widget', ':app', ':picture'

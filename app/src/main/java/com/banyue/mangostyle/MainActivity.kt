@@ -11,6 +11,8 @@ import com.banyue.commonlib.module.utils.toast
 import com.banyue.commonlib.ui.base.BaseActivity
 import com.banyue.commonlib.utils.setUrl
 import com.banyue.uiroutelib.MAIN_ACTIVITY
+import com.banyue.uiroutelib.PICTURE_LIST_FRAGMENT
+import com.banyue.uiroutelib.getBaseFragment
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -18,16 +20,6 @@ import org.jetbrains.anko.find
 
 @Route(path = MAIN_ACTIVITY)
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    override fun initView() {
-        val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        nav_view.setNavigationItemSelectedListener(this)
-        immersionBar.fitsSystemWindows(false).init()
-    }
 
     override fun getLayoutRes(): Int = R.layout.activity_main
 
@@ -39,6 +31,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         nav_view.getHeaderView(0)
                 .find<CircleImageView>(R.id.ivHead)
                 .setUrl("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3906161185,333176228&fm=27&gp=0.jpg")
+    }
+
+    override fun initView() {
+        val toggle = ActionBarDrawerToggle(
+                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawer_layout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        nav_view.setNavigationItemSelectedListener(this)
+        immersionBar.fitsSystemWindows(false).init()
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.frameLayout, getBaseFragment(PICTURE_LIST_FRAGMENT))
+                .commit()
     }
 
     override fun onBackPressed() {
