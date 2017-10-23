@@ -27,27 +27,16 @@ abstract class BaseObserver<T> :
 
     override fun onNext(t: BaseResultBean<T>) {
         "BaseHttp".log("resultData=$t")
-        when (t.result) {
-            "200" -> {
+        when (t.showapi_res_code) {
+            0 -> {
                 //有数据
-                doOnNext(t.datas, t.result, t.msg)
+                doOnNext(t.showapi_res_body)
             }
-            "-100" -> {
-//                val intent = Intent(App.sContext, LoginActivity::class.java)
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//                App.sContext.startActivity(intent)
-//                AppManage.INSTANT.finishAllActivity()
-                //请登录
-                "请登录".toast()
-            }
-            "100" -> {
-                t.msg.toast()
-                doOnNoData()
-            }
+
             else -> {
                 //其他情况都在这里处理
                 doOnNoData()
-                t.msg.toast()
+                t.showapi_res_error.toast()
             }
         }
     }

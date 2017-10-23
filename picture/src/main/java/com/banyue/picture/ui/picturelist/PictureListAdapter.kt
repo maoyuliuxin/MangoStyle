@@ -10,9 +10,9 @@ import com.chad.library.adapter.base.BaseViewHolder
 /**
  * Created by Administrator on 2017/10/23.
  */
-class PictureListAdapter(res: Int = R.layout.item_pic, datas: ArrayList<PicBean.ShowapiResBody.Newslist>)
-    : BaseQuickAdapter<PicBean.ShowapiResBody.Newslist, BaseViewHolder>(res, datas) {
-    override fun convert(helper: BaseViewHolder?, item: PicBean.ShowapiResBody.Newslist?) {
+class PictureListAdapter(res: Int = R.layout.item_pic, datas: ArrayList<PicBean.Newslist>)
+    : BaseQuickAdapter<PicBean.Newslist, BaseViewHolder>(res, datas) {
+    override fun convert(helper: BaseViewHolder?, item: PicBean.Newslist?) {
         helper?.setText(R.id.tv_details, item?.title)
         helper?.getView<ImageView>(R.id.iv_pic)?.setUrlBig(item?.picUrl ?: "")
     }

@@ -7,7 +7,7 @@ import io.reactivex.disposables.Disposable
  */
 interface ISubscriber<in T> {
 
-    fun doOnNext(data: T?, code: String, msg: String)
+    fun doOnNext(data: T?)
 
     fun doOnError(msg: String)
 

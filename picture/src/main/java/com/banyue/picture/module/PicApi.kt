@@ -1,5 +1,6 @@
 package com.banyue.picture.module
 
+import com.banyue.commonlib.module.base.BaseResultBean
 import com.banyue.picture.module.bean.PicBean
 import io.reactivex.Observable
 import retrofit2.http.GET
@@ -17,5 +18,5 @@ interface PicApi {
             @Query("num") num: String = "10",
             @Query("page") page: String
 //            @Query("rand") rand :String = "1"
-    ): Observable<PicBean>
+    ): Observable<BaseResultBean<PicBean>>
 }

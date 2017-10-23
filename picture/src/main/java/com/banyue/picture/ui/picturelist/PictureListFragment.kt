@@ -22,13 +22,13 @@ import kotlinx.android.synthetic.main.fragment_picture_list.*
 @Route(path = PICTURE_LIST_FRAGMENT)
 class PictureListFragment : MVPBaseFragment<PictureListContract.View, PictureListPresenter>(), PictureListContract.View {
 
-    override fun onSuccessPull(data: PicBean) {
-        mAdapter.replaceData(data.showapi_res_body.newslist)
+    override fun onSuccessPull(data: PicBean?) {
+        mAdapter.replaceData(data?.newslist ?: arrayListOf())
         refresh.finishRefresh(true)
     }
 
-    override fun onSuccessDown(data: PicBean) {
-        mAdapter.addData(data.showapi_res_body.newslist)
+    override fun onSuccessDown(data: PicBean?) {
+        mAdapter.addData(data?.newslist ?: arrayListOf())
         refresh.finishLoadmore(true)
     }
 

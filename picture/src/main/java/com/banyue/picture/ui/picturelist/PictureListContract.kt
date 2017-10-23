@@ -11,8 +11,8 @@ import com.banyue.picture.module.bean.PicBean
 
 class PictureListContract {
     interface View : BaseView {
-        fun onSuccessPull(data: PicBean)
-        fun onSuccessDown(data: PicBean)
+        fun onSuccessPull(data: PicBean?)
+        fun onSuccessDown(data: PicBean?)
         fun onDefeatPull()
         fun onDefeatDown()
     }
