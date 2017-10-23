@@ -31,7 +31,7 @@ class App : Application() {
         sApplication = this
         InstallRoute.installApp(this)
         InstallDb.installApp(this)
-        initRefresh()
+//        initRefresh()
     }
 
     private fun initRefresh() {
