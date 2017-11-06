@@ -2,7 +2,7 @@ ext {
     isBuildApp = false //false:作为Lib组件存在， true:作为application存在
     android = [
             compileSdkVersion: 26,
-            buildToolsVersion: "26.0.1",
+            buildToolsVersion: "26.0.2",
             minSdkVersion    : 15,
             targetSdkVersion : 26,
             versionCode      : 1,
@@ -43,7 +43,7 @@ ext {
             "SmartRefreshLayout"           : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3',
             "anko"                         : "org.jetbrains.anko:anko-sdk25-coroutines:0.10.1",
             "anko_v7"                      : "org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.1",
-            "circleimageview"                      : "de.hdodenhof:circleimageview:2.2.0"
+            "circleimageview"              : "de.hdodenhof:circleimageview:2.2.0"
     ]
 
 }

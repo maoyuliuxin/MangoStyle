@@ -23,9 +23,6 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api rootProject.ext.dependencies["appcompat-v7"]
-    api rootProject.ext.dependencies["design"]
-    api rootProject.ext.dependencies["support-v4"]
     api rootProject.ext.dependencies["constraint-layout"]
     //RxRetrofit
     api rootProject.ext.dependencies["retrofit"]

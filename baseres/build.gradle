@@ -23,5 +23,7 @@ android {
 }
 
 dependencies {
-
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["support-v4"]
 }
